@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wumpus Game</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div id="game">
         <h1>Wumpus Game</h1>
         <div id="message"></div>
-        <div>
-            <button onclick="move('left')">Move Left</button>
-            <button onclick="move('right')">Move Right</button>
-            <button onclick="move('up')">Move Up</button>
-            <button onclick="move('down')">Move Down</button>
-        </div>
-        <button onclick="shoot()">Shoot Arrow</button>
         <div id="grid"></div>
+        <div id="score"></div>
+        <!-- The 8x8 game grid -->
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>

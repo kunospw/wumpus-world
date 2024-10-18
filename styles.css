@@ -1,68 +1,87 @@
+/* General Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  margin: 0;
 }
 
+/* Main Game Container */
 #game {
-    text-align: center;
+  text-align: center;
 }
 
+/* Grid Layout Styling */
 #grid {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(5, 50px);
-    gap: 5px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(8, 50px); /* 8x8 grid */
+  gap: 5px; /* Gap between cells */
 }
 
+/* Grid Cell Styling */
 .cell {
-    width: 50px;
-    height: 50px;
-    background-color: #e0e0e0;
-    border: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: background-color 0.3s ease; /* Smooth transitions */
 }
 
-img {
-    width: 50px;
-    height: 50px;
-}
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
+/* Styling for player */
+.cell img {
+  width: 48px;
+  height: 48px;
 }
 
-#game {
-    text-align: center;
+.cell.player {
+  border: 2px solid #007bff; /* Highlight the player's current position */
 }
 
-#grid {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(5, 50px);
-    gap: 5px;
+/* Breeze styling (for pits) */
+.cell.breeze {
+  background-color: #a7d8ff; /* Lighter and more noticeable blue */
 }
 
-.cell {
-    width: 50px;
-    height: 50px;
-    background-color: #e0e0e0;
-    border: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Stench styling (for Wumpus) */
+.cell.stench {
+  background-color: #8b4513; /* Darker brown to represent danger */
 }
 
-img {
-    width: 50px;
-    height: 50px;
+/* Glitter styling (for gold) */
+.cell.glitter {
+  background-color: #ffd700; /* Bright yellow for gold */
+}
+.cell.visited {
+  background-color: #d3d3d3; /* Light gray for visited cells */
+}
+
+/* Message Styling */
+#message {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Styling for game over (optional) */
+.game-over {
+  background-color: rgba(0, 0, 0, 0.6); /* Dimmed overlay */
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
 }
